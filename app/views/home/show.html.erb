@@ -1,0 +1,31 @@
+<div id='myElement'>Loading the player...</div>
+<script type='text/javascript'>
+  jwplayer.key="YgtWotBOi+JsQi+stgRlQ3SK21W2vbKi/K2V86kVbwU=";
+  jwplayer("myElement").setup({
+    "file": "<%= @link.html_safe %>",
+    "height": 450,
+    "width": 800,
+    "image": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj5yJ3D-sLiAhUJat4KHeZqAYIQjRx6BAgBEAU&url=https%3A%2F%2Fwikicachlam.com%2Ftong-hop-nhung-hinh-anh-dep-nhat-cua-bo-cong-anh%2F&psig=AOvVaw1TWch38atUX0R3iv56J_BE&ust=1559295497026597"
+  });
+
+  // var player = jwplayer('myElement');
+
+  // player.setup({
+  //   playlist: "<%= @link.html_safe %>"
+  // });
+
+  // player.addButton(
+  //   //This portion is what designates the graphic used for the button
+  //   "./assets/download.svg",
+  //   //This portion determines the text that appears as a tooltip
+  //   "Download Video",
+  //   //This portion designates the functionality of the button itself
+  //   function() {
+  //     //With the below code, we're grabbing the file that's currently playing
+  //     window.location.href = player.getPlaylistItem()['file'];
+  //   },
+  //   //And finally, here we set the unique ID of the button itself.
+  //   "download"
+  // );
+
+</script>

@@ -1,8 +1,216 @@
-<div id='myElement'>Loading the player...</div>
-<script type='text/javascript'>
-  jwplayer.key="YgtWotBOi+JsQi+stgRlQ3SK21W2vbKi/K2V86kVbwU=";
-  jwplayer("myElement").setup({
-    "file": "<%= @link %>",
-    "image": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj5yJ3D-sLiAhUJat4KHeZqAYIQjRx6BAgBEAU&url=https%3A%2F%2Fwikicachlam.com%2Ftong-hop-nhung-hinh-anh-dep-nhat-cua-bo-cong-anh%2F&psig=AOvVaw1TWch38atUX0R3iv56J_BE&ust=1559295497026597"
-  });
-</script>
+<div id="shell">
+  <div id="header">
+    <h1 id="logo"><a href="#">Phim Còn Lớn</a></h1>
+    <div class="social"> <span>FOLLOW US ON:</span>
+      <ul>
+        <li><a class="twitter" href="#">twitter</a></li>
+        <li><a class="facebook" href="#">facebook</a></li>
+        <li><a class="vimeo" href="#">vimeo</a></li>
+        <li><a class="rss" href="#">rss</a></li>
+      </ul>
+    </div>
+    <div id="navigation">
+      <ul>
+        <li><a class="active" href="#">HOME</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">IN THEATERS</a></li>
+        <li><a href="#">COMING SOON</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">ADVERTISE</a></li>
+      </ul>
+    </div>
+    <div id="sub-navigation">
+      <ul>
+        <li><a href="#">SHOW ALL</a></li>
+        <li><a href="#">LATEST TRAILERS</a></li>
+        <li><a href="#">TOP RATED</a></li>
+        <li><a href="#">MOST COMMENTED</a></li>
+      </ul>
+      <div id="search">
+        <form action="#" method="get" accept-charset="utf-8">
+          <label for="search-field">SEARCH</label>
+          <input type="text" name="search field" value="Enter search here" id="search-field" class="blink search-field"  />
+          <input type="submit" value="GO!" class="search-button" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="main">
+    <div id="content">
+      <div class="box">
+        <div class="head">
+          <h2>LATEST TRAILERS</h2>
+          <p class="text-right"><a href="#">See all</a></p>
+        </div>
+        <%= render partial: "/home/item", collection: @films, as: :film %>
+        <div class="cl">&nbsp;</div>
+      </div>
+      <div class="box">
+        <div class="head">
+          <h2>TOP RATED</h2>
+          <p class="text-right"><a href="#">See all</a></p>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><%= image_tag 'movie7' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">MAGNETO</span></span> <a href="#"><%= image_tag 'movie8' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">KUNG FU PANDA</span></span> <a href="#"><%= image_tag 'movie9' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">EAGLE EYE</span></span> <a href="#"><%= image_tag 'movie10' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">NARNIA</span></span> <a href="#"><%= image_tag 'movie11' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie last">
+          <div class="movie-image"> <span class="play"><span class="name">ANGELS &amp; DEMONS</span></span> <a href="#"><%= image_tag 'movie12' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="cl">&nbsp;</div>
+      </div>
+      <div class="box">
+        <div class="head">
+          <h2>MOST COMMENTED</h2>
+          <p class="text-right"><a href="#">See all</a></p>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">HOUSE</span></span> <a href="#"><%= image_tag 'movie13' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">VACANCY</span></span> <a href="#"><%= image_tag 'movie14' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">MIRRORS</span></span> <a href="#"><%= image_tag 'movie15' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">THE KINGDOM</span></span> <a href="#"><%= image_tag 'movie16' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie">
+          <div class="movie-image"> <span class="play"><span class="name">MOTIVES</span></span> <a href="#"><%= image_tag 'movie17' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="movie last">
+          <div class="movie-image"> <span class="play"><span class="name">THE PRESTIGE</span></span> <a href="#"><%= image_tag 'movie18' %></a> </div>
+          <div class="rating">
+            <p>RATING</p>
+            <div class="stars">
+              <div class="stars-in"> </div>
+            </div>
+            <span class="comments">12</span> </div>
+        </div>
+        <div class="cl">&nbsp;</div>
+      </div>
+    </div>
+    <div id="news">
+      <div class="head">
+        <h3>NEWS</h3>
+        <p class="text-right"><a href="#">See all</a></p>
+      </div>
+      <div class="content">
+        <p class="date">12.04.09</p>
+        <h4>Disney's A Christmas Carol</h4>
+        <p>&quot;Disney's A Christmas Carol,&quot; a multi-sensory thrill ride re-envisioned by Academy Award&reg;-winning filmmaker Robert Zemeckis, captures... </p>
+        <a href="#">Read more</a> </div>
+      <div class="content">
+        <p class="date">11.04.09</p>
+        <h4>Where the Wild Things Are</h4>
+        <p>Innovative director Spike Jonze collaborates with celebrated author Maurice Sendak to bring one of the most beloved books of all time to the big screen in &quot;Where the Wild Things Are,&quot;...</p>
+        <a href="#">Read more</a> </div>
+      <div class="content">
+        <p class="date">10.04.09</p>
+        <h4>The Box</h4>
+        <p>Norma and Arthur Lewis are a suburban couple with a young child who receive an anonymous gift bearing fatal and irrevocable consequences.</p>
+        <a href="#">Read more</a> </div>
+    </div>
+    <div id="coming">
+      <div class="head">
+        <h3>COMING SOON<strong>!</strong></h3>
+        <p class="text-right"><a href="#">See all</a></p>
+      </div>
+      <div class="content">
+        <h4>The Princess and the Frog </h4>
+        <a href="#"><%= image_tag 'coming-soon1' %></a>
+        <p>Walt Disney Animation Studios presents the musical &quot;The Princess and the Frog,&quot; an animated comedy set in the great city of New Orleans...</p>
+        <a href="#">Read more</a> </div>
+      <div class="cl">&nbsp;</div>
+      <div class="content">
+        <h4>The Princess and the Frog </h4>
+        <a href="#"><%= image_tag 'coming-soon2' %></a>
+        <p>Walt Disney Animation Studios presents the musical &quot;The Princess and the Frog,&quot; an animated comedy set in the great city of New Orleans...</p>
+        <a href="#">Read more</a> </div>
+    </div>
+    <div class="cl">&nbsp;</div>
+  </div>
+  <div id="footer">
+    <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
+    <p class="rf">Design by <a href="http://chocotemplates.com/">ChocoTemplates.com</a></p>
+    <div style="clear:both;"></div>
+  </div>
+</div>

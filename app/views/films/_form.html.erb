@@ -1,0 +1,8 @@
+<%= simple_form_for @film ,wrapper: :inline_form, html: { class: "form-inline" }, wrapper_mappings: { boolean: :inline_boolean } do |f| %>
+  <%= f.input :name, label: 'Category', input_html: { class: "mb-2 mr-sm-2" } %>
+  <%= f.input :country_id, as: :select, collection: Country.all.map{ |a| [a.id, a.name] }, label_method: :second, value_method: :first %>
+  <%= f.input :description, label: 'Category', input_html: { class: "mb-2 mr-sm-2" } %>
+  <%= f.input :url, label: 'Category', input_html: { class: "mb-2 mr-sm-2" } %>
+  <%= f.input :image, as: :file, label: 'Category', input_html: { class: "mb-2 mr-sm-2" } %>
+  <%= f.button :submit, class: "btn-primary mb-2" %>
+<% end %>
