@@ -19,6 +19,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem "omniauth"
 gem 'omniauth-facebook'
+gem "koala"
+gem "font-awesome-rails"
 gem 'simple_form'
 gem 'httparty'
 gem 'jwplayer-rails'

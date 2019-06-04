@@ -1,216 +1,814 @@
-<div id="shell">
-  <div id="header">
-    <h1 id="logo"><a href="#">Phim Còn Lớn</a></h1>
-    <div class="social"> <span>FOLLOW US ON:</span>
-      <ul>
-        <li><a class="twitter" href="#">twitter</a></li>
-        <li><a class="facebook" href="#">facebook</a></li>
-        <li><a class="vimeo" href="#">vimeo</a></li>
-        <li><a class="rss" href="#">rss</a></li>
-      </ul>
-    </div>
-    <div id="navigation">
-      <ul>
-        <li><a class="active" href="#">HOME</a></li>
-        <li><a href="#">NEWS</a></li>
-        <li><a href="#">IN THEATERS</a></li>
-        <li><a href="#">COMING SOON</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">ADVERTISE</a></li>
-      </ul>
-    </div>
-    <div id="sub-navigation">
-      <ul>
-        <li><a href="#">SHOW ALL</a></li>
-        <li><a href="#">LATEST TRAILERS</a></li>
-        <li><a href="#">TOP RATED</a></li>
-        <li><a href="#">MOST COMMENTED</a></li>
-      </ul>
-      <div id="search">
-        <form action="#" method="get" accept-charset="utf-8">
-          <label for="search-field">SEARCH</label>
-          <input type="text" name="search field" value="Enter search here" id="search-field" class="blink search-field"  />
-          <input type="submit" value="GO!" class="search-button" />
-        </form>
+<%= render partial: "layouts/slider" %>
+<section class="content">
+  <div class="content__head">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="content__title">PHIM MỚI</h2>
+          <ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">MỚI RA MẮT</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">PHIM LẺ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">PHIM BỘ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">PHIM HOẠT HÌNH</a>
+            </li>
+          </ul>
+          <div class="content__mobile-tabs" id="content__mobile-tabs">
+            <div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <input type="button" value="New items">
+              <span></span>
+            </div>
+            <div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">NEW RELEASES</a></li>
+
+                <li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">MOVIES</a></li>
+
+                <li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">TV SERIES</a></li>
+
+                <li class="nav-item"><a class="nav-link" id="4-tab" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">CARTOONS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div id="main">
-    <div id="content">
-      <div class="box">
-        <div class="head">
-          <h2>LATEST TRAILERS</h2>
-          <p class="text-right"><a href="#">See all</a></p>
+
+  <div class="container">
+    <!-- content tabs -->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+        <div class="row">
+          <!-- card -->
+          <div class="col-6 col-sm-12 col-lg-6">
+            <div class="card card--list">
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="card__cover">
+                    <%= image_tag "covers/cover" %>
+                    <a href="#" class="card__play">
+                      <i class="fa fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-8">
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                    <span class="card__category">
+                      <a href="#">Action</a>
+                      <a href="#">Triler</a>
+                    </span>
+
+                    <div class="card__wrap">
+                      <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+
+                      <ul class="card__list">
+                        <li>HD</li>
+                        <li>16+</li>
+                      </ul>
+                    </div>
+
+                    <div class="card__description">
+                      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-12 col-lg-6">
+            <div class="card card--list">
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="card__cover">
+                    <%= image_tag "covers/cover2" %>
+                    <a href="#" class="card__play">
+                      <i class="fa fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-8">
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="#">Benched</a></h3>
+                    <span class="card__category">
+                      <a href="#">Comedy</a>
+                    </span>
+
+                    <div class="card__wrap">
+                      <span class="card__rate"><i class="fa fa-star"></i>7.1</span>
+
+                      <ul class="card__list">
+                        <li>HD</li>
+                        <li>16+</li>
+                      </ul>
+                    </div>
+
+                    <div class="card__description">
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-12 col-lg-6">
+            <div class="card card--list">
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="card__cover">
+                    <%= image_tag "covers/cover3" %>
+                    <a href="#" class="card__play">
+                      <i class="fa fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-8">
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="#">Whitney</a></h3>
+                    <span class="card__category">
+                      <a href="#">Romance</a>
+                      <a href="#">Drama</a>
+                      <a href="#">Music</a>
+                    </span>
+
+                    <div class="card__wrap">
+                      <span class="card__rate"><i class="fa fa-star"></i>6.3</span>
+
+                      <ul class="card__list">
+                        <li>HD</li>
+                        <li>16+</li>
+                      </ul>
+                    </div>
+
+                    <div class="card__description">
+                      <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-12 col-lg-6">
+            <div class="card card--list">
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="card__cover">
+                    <%= image_tag "covers/cover4" %>
+                    <a href="#" class="card__play">
+                      <i class="fa fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-8">
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="#">Blindspotting</a></h3>
+                    <span class="card__category">
+                      <a href="#">Comedy</a>
+                      <a href="#">Drama</a>
+                    </span>
+
+                    <div class="card__wrap">
+                      <span class="card__rate"><i class="fa fa-star"></i>7.9</span>
+
+                      <ul class="card__list">
+                        <li>HD</li>
+                        <li>16+</li>
+                      </ul>
+                    </div>
+
+                    <div class="card__description">
+                      <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-12 col-lg-6">
+            <div class="card card--list">
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="card__cover">
+                    <%= image_tag "covers/cover5" %>
+                    <a href="#" class="card__play">
+                      <i class="fa fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-8">
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                    <span class="card__category">
+                      <a href="#">Action</a>
+                      <a href="#">Triler</a>
+                    </span>
+
+                    <div class="card__wrap">
+                      <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+
+                      <ul class="card__list">
+                        <li>HD</li>
+                        <li>16+</li>
+                      </ul>
+                    </div>
+
+                    <div class="card__description">
+                      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-12 col-lg-6">
+            <div class="card card--list">
+              <div class="row">
+                <div class="col-12 col-sm-4">
+                  <div class="card__cover">
+                    <%= image_tag "covers/cover6" %>
+                    <a href="#" class="card__play">
+                      <i class="fa fa-play"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-8">
+                  <div class="card__content">
+                    <h3 class="card__title"><a href="#">Benched</a></h3>
+                    <span class="card__category">
+                      <a href="#">Comedy</a>
+                    </span>
+
+                    <div class="card__wrap">
+                      <span class="card__rate"><i class="fa fa-star"></i>7.1</span>
+
+                      <ul class="card__list">
+                        <li>HD</li>
+                        <li>16+</li>
+                      </ul>
+                    </div>
+
+                    <div class="card__description">
+                      <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
         </div>
-        <%= render partial: "/home/item", collection: @films, as: :film %>
-        <div class="cl">&nbsp;</div>
       </div>
-      <div class="box">
-        <div class="head">
-          <h2>TOP RATED</h2>
-          <p class="text-right"><a href="#">See all</a></p>
+
+      <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
+        <div class="row">
+          <%= render partial: 'home/item', collection: @films, as: :film %>
         </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><%= image_tag 'movie7' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">MAGNETO</span></span> <a href="#"><%= image_tag 'movie8' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">KUNG FU PANDA</span></span> <a href="#"><%= image_tag 'movie9' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">EAGLE EYE</span></span> <a href="#"><%= image_tag 'movie10' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">NARNIA</span></span> <a href="#"><%= image_tag 'movie11' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">ANGELS &amp; DEMONS</span></span> <a href="#"><%= image_tag 'movie12' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="cl">&nbsp;</div>
       </div>
-      <div class="box">
-        <div class="head">
-          <h2>MOST COMMENTED</h2>
-          <p class="text-right"><a href="#">See all</a></p>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">HOUSE</span></span> <a href="#"><%= image_tag 'movie13' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+
+      <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab">
+        <div class="row">
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover2" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                <span class="card__category">
+                  <a href="#">Action</a>
+                  <a href="#">Triler</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+              </div>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">VACANCY</span></span> <a href="#"><%= image_tag 'movie14' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Benched</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.1</span>
+              </div>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">MIRRORS</span></span> <a href="#"><%= image_tag 'movie15' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover4" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Whitney</a></h3>
+                <span class="card__category">
+                  <a href="#">Romance</a>
+                  <a href="#">Drama</a>
+                  <a href="#">Music</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>6.3</span>
+              </div>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">THE KINGDOM</span></span> <a href="#"><%= image_tag 'movie16' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover3" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                  <a href="#">Drama</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.9</span>
+              </div>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">MOTIVES</span></span> <a href="#"><%= image_tag 'movie17' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover6" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                <span class="card__category">
+                  <a href="#">Action</a>
+                  <a href="#">Triler</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+              </div>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">THE PRESTIGE</span></span> <a href="#"><%= image_tag 'movie18' %></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover5" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Benched</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.1</span>
+              </div>
             </div>
-            <span class="comments">12</span> </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover5" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Whitney</a></h3>
+                <span class="card__category">
+                  <a href="#">Romance</a>
+                  <a href="#">Drama</a>
+                  <a href="#">Music</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>6.3</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover6" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                  <a href="#">Drama</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.9</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover3" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                <span class="card__category">
+                  <a href="#">Action</a>
+                  <a href="#">Triler</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover4" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Benched</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.1</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Whitney</a></h3>
+                <span class="card__category">
+                  <a href="#">Romance</a>
+                  <a href="#">Drama</a>
+                  <a href="#">Music</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>6.3</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover2" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                  <a href="#">Drama</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.9</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
         </div>
-        <div class="cl">&nbsp;</div>
+      </div>
+
+      <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="4-tab">
+        <div class="row">
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                <span class="card__category">
+                  <a href="#">Action</a>
+                  <a href="#">Triler</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover3" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Benched</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.1</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover2" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Whitney</a></h3>
+                <span class="card__category">
+                  <a href="#">Romance</a>
+                  <a href="#">Drama</a>
+                  <a href="#">Music</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>6.3</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover6" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                  <a href="#">Drama</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.9</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover4" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                <span class="card__category">
+                  <a href="#">Action</a>
+                  <a href="#">Triler</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover5" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Benched</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.1</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover6" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Whitney</a></h3>
+                <span class="card__category">
+                  <a href="#">Romance</a>
+                  <a href="#">Drama</a>
+                  <a href="#">Music</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>6.3</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover5" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                  <a href="#">Drama</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.9</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover4" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+                <span class="card__category">
+                  <a href="#">Action</a>
+                  <a href="#">Triler</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover3" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Benched</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.1</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover2" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Whitney</a></h3>
+                <span class="card__category">
+                  <a href="#">Romance</a>
+                  <a href="#">Drama</a>
+                  <a href="#">Music</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>6.3</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <!-- card -->
+          <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <div class="card__cover">
+                <%= image_tag "covers/cover" %>
+                <a href="#" class="card__play">
+                  <i class="fa fa-play"></i>
+                </a>
+              </div>
+              <div class="card__content">
+                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
+                <span class="card__category">
+                  <a href="#">Comedy</a>
+                  <a href="#">Drama</a>
+                </span>
+                <span class="card__rate"><i class="fa fa-star"></i>7.9</span>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
       </div>
     </div>
-    <div id="news">
-      <div class="head">
-        <h3>NEWS</h3>
-        <p class="text-right"><a href="#">See all</a></p>
-      </div>
-      <div class="content">
-        <p class="date">12.04.09</p>
-        <h4>Disney's A Christmas Carol</h4>
-        <p>&quot;Disney's A Christmas Carol,&quot; a multi-sensory thrill ride re-envisioned by Academy Award&reg;-winning filmmaker Robert Zemeckis, captures... </p>
-        <a href="#">Read more</a> </div>
-      <div class="content">
-        <p class="date">11.04.09</p>
-        <h4>Where the Wild Things Are</h4>
-        <p>Innovative director Spike Jonze collaborates with celebrated author Maurice Sendak to bring one of the most beloved books of all time to the big screen in &quot;Where the Wild Things Are,&quot;...</p>
-        <a href="#">Read more</a> </div>
-      <div class="content">
-        <p class="date">10.04.09</p>
-        <h4>The Box</h4>
-        <p>Norma and Arthur Lewis are a suburban couple with a young child who receive an anonymous gift bearing fatal and irrevocable consequences.</p>
-        <a href="#">Read more</a> </div>
-    </div>
-    <div id="coming">
-      <div class="head">
-        <h3>COMING SOON<strong>!</strong></h3>
-        <p class="text-right"><a href="#">See all</a></p>
-      </div>
-      <div class="content">
-        <h4>The Princess and the Frog </h4>
-        <a href="#"><%= image_tag 'coming-soon1' %></a>
-        <p>Walt Disney Animation Studios presents the musical &quot;The Princess and the Frog,&quot; an animated comedy set in the great city of New Orleans...</p>
-        <a href="#">Read more</a> </div>
-      <div class="cl">&nbsp;</div>
-      <div class="content">
-        <h4>The Princess and the Frog </h4>
-        <a href="#"><%= image_tag 'coming-soon2' %></a>
-        <p>Walt Disney Animation Studios presents the musical &quot;The Princess and the Frog,&quot; an animated comedy set in the great city of New Orleans...</p>
-        <a href="#">Read more</a> </div>
-    </div>
-    <div class="cl">&nbsp;</div>
+    <!-- end content tabs -->
   </div>
-  <div id="footer">
-    <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
-    <p class="rf">Design by <a href="http://chocotemplates.com/">ChocoTemplates.com</a></p>
-    <div style="clear:both;"></div>
-  </div>
-</div>
+</section>
+<%= render partial: "layouts/expected" %>

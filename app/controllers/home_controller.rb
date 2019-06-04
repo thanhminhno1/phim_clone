@@ -4,8 +4,9 @@ class HomeController < ApplicationController
   end
 
   def show
-    response = HTTParty.get(Film.find(params[:id]).url)
-    @link = response.to_s.match(/hd_src:"([A-Za-z0-9\/\.\-\=\&\?\_\:])+"/).to_s[8...-1]
+    facebook = Koala::Facebook::API.new(User.first.token)
+    a = facebook.get_object("#{Film.find(params[:id]).url}?fields=picture,source")
+    @link = a["source"]
   end
 end
 
