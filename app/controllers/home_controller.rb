@@ -5,8 +5,8 @@ class HomeController < ApplicationController
 
   def show
     facebook = Koala::Facebook::API.new(User.first.token)
-    a = facebook.get_object("#{Film.find(params[:id]).url}?fields=picture,source")
-    @link = a["source"]
+    @film = Film.find(params[:id])
+    @link = facebook.get_object("#{@film.url}?fields=picture,source")["source"]
   end
 end
 

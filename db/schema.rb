@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_041333) do
+ActiveRecord::Schema.define(version: 2019_06_06_081042) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "name", null: false
@@ -77,6 +77,12 @@ ActiveRecord::Schema.define(version: 2019_06_03_041333) do
     t.bigint "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "film_type"
+    t.string "year_release"
+    t.string "running_time"
+    t.string "quanlity"
+    t.integer "min_age"
+    t.integer "rate"
     t.index ["country_id"], name: "index_films_on_country_id"
   end
 

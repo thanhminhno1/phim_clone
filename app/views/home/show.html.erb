@@ -1,84 +1,62 @@
-	<!-- details -->
 	<section class="section details">
-		<!-- details background -->
 		<div class="details__bg" data-bg="home/home__bg.jpg"></div>
-		<!-- end details background -->
-
-		<!-- details content -->
 		<div class="container">
 			<div class="row">
-				<!-- title -->
 				<div class="col-12">
-					<h1 class="details__title">I Dream in Another Language</h1>
+					<h1 class="details__title"><%= @film.name %></h1>
 				</div>
-				<!-- end title -->
-
-				<!-- content -->
 				<div class="col-12 col-xl-6">
 					<div class="card card--details">
 						<div class="row">
-							<!-- card cover -->
 							<div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-5">
 								<div class="card__cover">
                   <%= image_tag "covers/cover" %>
 								</div>
 							</div>
-							<!-- end card cover -->
-
-							<!-- card content -->
 							<div class="col-12 col-sm-8 col-md-8 col-lg-9 col-xl-7">
 								<div class="card__content">
 									<div class="card__wrap">
 										<span class="card__rate"><i class="fa fa-star"></i>8.4</span>
 
 										<ul class="card__list">
-											<li>HD</li>
-											<li>16+</li>
+											<li><%= @film.quanlity %></li>
+											<li><%= @film.min_age %>+</li>
 										</ul>
 									</div>
 
 									<ul class="card__meta">
-										<li><span>Genre:</span> <a href="#">Action</a>
-										<a href="#">Triler</a></li>
-										<li><span>Release year:</span> 2017</li>
-										<li><span>Running time:</span> 120 min</li>
-										<li><span>Country:</span> <a href="#">USA</a> </li>
+										<li><span>Thể loại:</span>
+										<a href="#"><%= @film.categories.pluck(:name).join(", ") %></a></li>
+										<li><span>Năm ra mắt:</span> <%= @film.year_release %></li>
+										<li><span>Thời lượng:</span> <%= @film.running_time %> min</li>
+										<li><span>Quốc gia:</span> <a href="#"> <%= @film.country.name %> </a> </li>
 									</ul>
 
 									<div class="card__description card__description--details">
-										It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+										<%= @film.description %>
 									</div>
 								</div>
 							</div>
-							<!-- end card content -->
 						</div>
 					</div>
 				</div>
-				<!-- end content -->
-
-				<!-- player -->
 				<div class="col-12 col-xl-6">
 					<video controls crossorigin playsinline poster="../../../cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
-						<!-- Video files -->
-						<source src="<%= @link.html_safe %>" type="video/mp4" size="576">
+						<source src="<%= @link %>" type="video/mp4" size="576">
 						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
 						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
 						<source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
 
-						<!-- Caption files -->
 						<track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
 						    default>
 						<track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
 
-						<!-- Fallback for browsers that don't support the <video> element -->
 						<a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
 					</video>
 				</div>
-				<!-- end player -->
 
 				<div class="col-12">
 					<div class="details__wrap">
-						<!-- availables -->
 						<div class="details__devices">
 							<span class="details__devices-title">Available on devices:</span>
 							<ul class="details__devices-list">
@@ -88,9 +66,6 @@
 								<li><i class="fa fa-tv"></i><span>Smart TV</span></li>
 							</ul>
 						</div>
-						<!-- end availables -->
-
-						<!-- share -->
 						<div class="details__share">
 							<span class="details__share-title">Share with friends:</span>
 
@@ -101,16 +76,12 @@
 								<li class="vk"><a href="#"><i class="fa fa-vk"></i></a></li>
 							</ul>
 						</div>
-						<!-- end share -->
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- end details content -->
 	</section>
-	<!-- end details -->
 
-	<!-- content -->
 	<section class="content">
 		<div class="content__head">
 			<div class="container">
@@ -157,10 +128,12 @@
 			<div class="row">
 				<div class="col-12 col-lg-8 col-xl-8">
 					<!-- content tabs -->
-					<div class="tab-content" id="myTabContent">
+					<div class="tab-content" id="myTabContent" style="background: white;">
 						<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
-							<div class="row">
-
+							<div class="row none-margin" >
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=213332442606223&autoLogAppEvents=1"></script>
+                <div class="fb-comments" data-href="<%= home_url(@film) %>" data-width="" data-numposts="5"></div>
 							</div>
 						</div>
 
@@ -171,7 +144,7 @@
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
 										<a href="img/gallery/project-1.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="img/gallery/project-1.jpg" itemprop="thumbnail" alt="Image description" />
+                      <%= image_tag "gallery/project-1" %>
 										</a>
 										<figcaption itemprop="caption description">Some image caption 1</figcaption>
 									</figure>
@@ -180,7 +153,7 @@
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
 										<a href="img/gallery/project-2.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="img/gallery/project-2.jpg" itemprop="thumbnail" alt="Image description" />
+											<%= image_tag "gallery/project-2" %>
 										</a>
 										<figcaption itemprop="caption description">Some image caption 2</figcaption>
 									</figure>
@@ -189,7 +162,7 @@
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
 										<a href="img/gallery/project-3.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="img/gallery/project-3.jpg" itemprop="thumbnail" alt="Image description" />
+											<%= image_tag "gallery/project-3" %>
 										</a>
 										<figcaption itemprop="caption description">Some image caption 3</figcaption>
 									</figure>
@@ -198,7 +171,7 @@
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
 										<a href="img/gallery/project-4.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="img/gallery/project-4.jpg" itemprop="thumbnail" alt="Image description" />
+											<%= image_tag "gallery/project-4" %>
 										</a>
 										<figcaption itemprop="caption description">Some image caption 4</figcaption>
 									</figure>
@@ -207,7 +180,7 @@
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
 										<a href="img/gallery/project-5.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="img/gallery/project-5.jpg" itemprop="thumbnail" alt="Image description" />
+											<%= image_tag "gallery/project-5" %>
 										</a>
 										<figcaption itemprop="caption description">Some image caption 5</figcaption>
 									</figure>
@@ -216,7 +189,7 @@
 									<!-- gallery item -->
 									<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
 										<a href="img/gallery/project-6.jpg" itemprop="contentUrl" data-size="1920x1280">
-											<img src="img/gallery/project-6.jpg" itemprop="thumbnail" alt="Image description" />
+											<%= image_tag "gallery/project-6" %>
 										</a>
 										<figcaption itemprop="caption description">Some image caption 6</figcaption>
 									</figure>
