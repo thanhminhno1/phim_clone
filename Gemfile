@@ -21,6 +21,7 @@ gem "omniauth"
 gem 'omniauth-facebook'
 gem "koala"
 gem "font-awesome-rails"
+gem "figaro"
 gem 'simple_form'
 gem 'httparty'
 gem 'jwplayer-rails'

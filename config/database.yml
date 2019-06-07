@@ -15,23 +15,26 @@ default: &default
   charset: utf8mb4
   collation: utf8mb4_bin
   pool: 5
-  host: localhost
-  port: 3306
-  username: root
-  password: 123456
+  host: <%= ENV["DATABASE_HOST"] %>
+  port: <%= ENV["DATABASE_PORT"] %>
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
 
 development:
   <<: *default
-  database: phimmoi_develop
+  database: <%= ENV["DEVELOPMENT_DATABASE_NAME"] %>
 
 test:
   <<: *default
-  database: phimmoi_develop
+  database: <%= ENV["TEST_DATABASE_NAME"] %>
 
 staging:
   <<: *default
-  database: phimmoi_staging
+  database: <%= ENV["STAGING_DATABASE_NAME"] %>
 
 production:
   <<: *default
-  database: phimmoi_product
+  database: <%= ENV["PRODUCTION_DATABASE_NAME"] %>
+  host: <%= ENV["PRODUCTION_DATABASE_HOST"] %>
+  username: <%= ENV["PRODUCTION_DATABASE_USERNAME"] %>
+  password: <%= ENV["PRODUCTION_DATABASE_PASSWORD"] %>
