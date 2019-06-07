@@ -10,11 +10,26 @@ class FilmsController < AdminController
 
   def create
     @film = Film.create! process_params
+    redirect_to films_path
+  end
+
+  def edit
+    @film = Film.find params[:id]
+  end
+
+  def update
+    @film = Film.find params[:id]
+    if @film.update process_params
+      redirect_to films_path
+    else
+      render :edit
+    end
   end
 
   private
   def film_params
-    params.require(:film).permit :name, :description, :url, :image, :country_id, { category_films_attributes: [category_id: []]}
+    params.require(:film).permit :name, :description, :url, :image, :year_release,
+      :country_id, :min_age, :quanlity, :running_time, :rate, :film_type, { category_films_attributes: [category_id: []]}
   end
 
   def process_params

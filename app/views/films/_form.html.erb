@@ -5,6 +5,12 @@
   <%= f.simple_fields_for :category_films do |a| %>
     <%= a.input :category_id, as: :check_boxes, collection: Category.all.map{ |a| [a.name, a.id] }, label: "Thể loại" %>
   <% end %>
+  <%= f.input :film_type, as: :select, collection: Film::FILM_TYPES.map{ |a| [t(a), a] }, label: "Loại phim", include_blank: false %>
+  <%= f.input :year_release, label: 'Năm ra mắt' %>
+  <%= f.input :running_time, label: 'Thời lượng hoặc số tập' %>
+  <%= f.input :quanlity, as: :select, collection: Film::QUANLITY_TYPES.map{ |a| [a, a] }, label: 'Chất lượng', include_blank: false %>
+  <%= f.input :rate, label: 'Đánh giá' %>
+  <%= f.input :min_age, label: 'Độ tuổi tối thiểu' %>
   <%= f.input :description, label: 'Mô tả' %>
   <%= f.input :url, label: 'url' %>
   <%= f.input :image, as: :file, label: 'Ảnh' %>

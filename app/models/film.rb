@@ -1,4 +1,7 @@
 class Film < ApplicationRecord
+  FILM_TYPES = [:movie, :series]
+  QUANLITY_TYPES = [:HD, :CAM]
+
   belongs_to :country
   has_many :category_films
   has_many :categories, through: :category_films

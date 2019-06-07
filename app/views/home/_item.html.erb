@@ -1,7 +1,7 @@
 <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
   <div class="card">
     <div class="card__cover card__cover--max-width">
-      <%= image_tag film.image %>
+      <%= image_tag film.image if film.image.attached? %>
       <%= link_to home_path(film), class: "card__play" do%>
         <i class="fa fa-play"></i>
       <% end %>

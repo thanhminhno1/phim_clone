@@ -94,11 +94,11 @@ select {
     margin: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     -webkit-box-shadow: none;
-    box-shadow: none;
+    box-shadow: none; */
 }
 
 input:focus,
@@ -2321,8 +2321,8 @@ ul {
 }
 
 .plan-features li:before {
-    content: '\f3ff';
-    font-family: "Ionicons";
+    content: '\f00c';
+    font-family: "FontAwesome";
     position: absolute;
     top: 0;
     left: 15px;
@@ -3782,8 +3782,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .sign__group--checkbox input:not(:checked)+label:after,
 .sign__group--checkbox input:checked+label:after {
-    font-family: 'Ionicons';
-    content: '\f3ff';
+    font-family: "FontAwesome";
+    content: '\f00c';
     position: absolute;
     left: 0;
     top: 0;

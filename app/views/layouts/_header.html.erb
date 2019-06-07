@@ -9,14 +9,14 @@
             </a>
             <ul class="header__nav">
               <li class="header__nav-item">
-                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TRANG CHỦ</a>
                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
                   <li><a href="index.html">Home slideshow bg</a></li>
                   <li><a href="index2.html">Home static bg</a></li>
                 </ul>
               </li>
               <li class="header__nav-item">
-                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THỂ LOẠI</a>
                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
                   <li><a href="catalog1.html">Catalog Grid</a></li>
                   <li><a href="catalog2.html">Catalog List</a></li>
@@ -25,18 +25,24 @@
                 </ul>
               </li>
               <li class="header__nav-item">
-                <a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+                <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">QUỐC GIA</a>
+                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
+                  <li><a href="catalog1.html">Catalog Grid</a></li>
+                  <li><a href="catalog2.html">Catalog List</a></li>
+                  <li><a href="details1.html">Details Movie</a></li>
+                  <li><a href="details2.html">Details TV Series</a></li>
+                </ul>
               </li>
               <li class="header__nav-item">
-                <a href="faq.html" class="header__nav-link">Help</a>
+                <a href="pricing.html" class="header__nav-link">LIÊN HỆ</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="faq.html" class="header__nav-link">HỖ TRỢ</a>
               </li>
               <li class="dropdown header__nav-item">
                 <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h"></i></a>
                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="signin.html">Sign In</a></li>
-                  <li><a href="signup.html">Sign Up</a></li>
-                  <li><a href="404.html">404 Page</a></li>
+                  <li><a href="about.html">THÔNG TIN</a></li>
                 </ul>
               </li>
             </ul>
@@ -44,10 +50,10 @@
               <button class="header__search-btn" type="button">
                 <i class="fa fa-search"></i>
               </button>
-              <a href="signin.html" class="header__sign-in">
+              <%= link_to new_user_session_path, class: "header__sign-in" do %>
                 <i class="icon ion-ios-log-in"></i>
-                <span>sign in</span>
-              </a>
+                <span>ĐĂNG NHẬP</span>
+              <% end %>
             </div>
             <button class="header__btn" type="button">
               <span></span>
@@ -64,9 +70,9 @@
       <div class="row">
         <div class="col-12">
           <div class="header__search-content">
-            <input type="text" placeholder="Search for a movie, TV Series that you are looking for">
+            <input type="text" placeholder="Tên phim mà bạn đang tìm kiếm ...">
 
-            <button type="button">search</button>
+            <button type="button">Tìm kiếm</button>
           </div>
         </div>
       </div>
