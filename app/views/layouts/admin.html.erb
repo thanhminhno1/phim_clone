@@ -10,10 +10,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= link_to "Thêm danh mục", new_category_path  %>
-    <%= link_to "Thêm Quốc gia", new_country_path %>
-    <%= link_to "Thêm Phim", new_film_path %>
-    <%= yield %>
+  <body style="background: white;">
+    <%= render partial: "layouts/header_admin" %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

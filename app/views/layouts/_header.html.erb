@@ -4,45 +4,43 @@
       <div class="row">
         <div class="col-12">
           <div class="header__content">
-            <a href="index.html" class="header__logo">
+            <%= link_to root_path, class: "header__logo" do %>
               <%= image_tag 'logo' %>
-            </a>
+            <% end %>
             <ul class="header__nav">
               <li class="header__nav-item">
                 <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TRANG CHỦ</a>
-                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
-                  <li><a href="index.html">Home slideshow bg</a></li>
-                  <li><a href="index2.html">Home static bg</a></li>
-                </ul>
               </li>
               <li class="header__nav-item">
                 <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THỂ LOẠI</a>
                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-                  <li><a href="catalog1.html">Catalog Grid</a></li>
-                  <li><a href="catalog2.html">Catalog List</a></li>
-                  <li><a href="details1.html">Details Movie</a></li>
-                  <li><a href="details2.html">Details TV Series</a></li>
+                  <% Category.all.each do |category| %>
+                    <li>
+                      <%= link_to category.name, category_path(category) %>
+                    </li>
+                  <% end %>
                 </ul>
               </li>
               <li class="header__nav-item">
                 <a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">QUỐC GIA</a>
                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-                  <li><a href="catalog1.html">Catalog Grid</a></li>
-                  <li><a href="catalog2.html">Catalog List</a></li>
-                  <li><a href="details1.html">Details Movie</a></li>
-                  <li><a href="details2.html">Details TV Series</a></li>
+                  <% Country.all.each do |country| %>
+                    <li>
+                      <%= link_to country.name, category_path(country) %>
+                    </li>
+                  <% end %>
                 </ul>
               </li>
               <li class="header__nav-item">
-                <a href="pricing.html" class="header__nav-link">LIÊN HỆ</a>
+                <a href="#" class="header__nav-link">LIÊN HỆ</a>
               </li>
               <li class="header__nav-item">
-                <a href="faq.html" class="header__nav-link">HỖ TRỢ</a>
+                <a href="#" class="header__nav-link">HỖ TRỢ</a>
               </li>
               <li class="dropdown header__nav-item">
                 <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h"></i></a>
                 <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-                  <li><a href="about.html">THÔNG TIN</a></li>
+                  <li><a href="#">THÔNG TIN</a></li>
                 </ul>
               </li>
             </ul>

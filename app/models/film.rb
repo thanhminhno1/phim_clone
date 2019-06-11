@@ -9,5 +9,6 @@ class Film < ApplicationRecord
   has_many :actors, through: :actor_films
   has_one_attached :image
 
-  accepts_nested_attributes_for :category_films
+  scope :movie, -> { where(film_type: :movie) }
+  scope :series, -> { where(film_type: :series) }
 end

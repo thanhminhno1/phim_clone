@@ -9,10 +9,9 @@
     <div class="card__content">
       <h3 class="card__title"><a href="#"><%= film.name %></a></h3>
       <span class="card__category">
-        <a href="#">Action</a>
-        <a href="#">Triler</a>
+        <%= film.categories.pluck(:name).join(", ") %>
       </span>
-      <span class="card__rate"><i class="fa fa-star"></i>8.4</span>
+      <span class="card__rate"><i class="fa fa-star"></i><%= film.rate %></span>
     </div>
   </div>
 </div>

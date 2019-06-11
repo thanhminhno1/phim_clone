@@ -1423,6 +1423,10 @@ ul {
     height: 270px;
 }
 
+.card__cover--max-width2 img {
+    height: 300px;
+}
+
 .card__cover:before {
     content: '';
     position: absolute;

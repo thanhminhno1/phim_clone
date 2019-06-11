@@ -1,0 +1,20 @@
+<%= link_to "Thêm mới", new_category_path, class: "btn btn-success my-2" %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Tên</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <th scope="row"><%= category.name %></th>
+        <td>
+          <%= link_to "Chỉnh sửa", edit_category_path(category), class: "btn btn-light" %>
+          <%= link_to "Xóa", category_path(category), class: "btn btn-dark", method: :delete, data: { confirm: "Bạn có chắc chắn muốn xóa danh mục này không? Điều này đồng nghĩa với việc tất cả phim nằm trong danh mục này đều bị xóa" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

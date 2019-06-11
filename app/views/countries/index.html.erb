@@ -1,0 +1,20 @@
+<%= link_to "Thêm mới", new_country_path, class: "btn btn-success my-2" %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Tên</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @countries.each do |country| %>
+      <tr>
+        <th scope="row"><%= country.name %></th>
+        <td>
+          <%= link_to "Chỉnh sửa", edit_country_path(country), class: "btn btn-light" %>
+          <%= link_to "Xóa", country_path(country), class: "btn btn-dark", method: :delete, data: { confirm: "Bạn có chắc chắn muốn xóa quốc gia này không, điều này đồng nghĩa với việc tất cả phim thuộc về quốc gia này sẽ bị xóa?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
