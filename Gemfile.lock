@@ -145,6 +145,7 @@ GEM
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
+    mysql2 (0.5.3)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -163,10 +164,11 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
-    pg (1.1.4)
     public_suffix (3.1.0)
     puma (3.12.1)
     rack (2.0.7)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.3)
@@ -300,10 +302,11 @@ DEPENDENCIES
   kaminari
   koala
   listen (>= 3.0.5, < 3.2)
+  mysql2
   omniauth
   omniauth-facebook
-  pg
   puma (~> 3.11)
+  rack-cors
   rails (~> 5.2.2)
   rspec
   rspec-collection_matchers
@@ -324,4 +327,4 @@ RUBY VERSION
    ruby 2.6.1p33
 
 BUNDLED WITH
-   2.0.1
+   2.1.4
